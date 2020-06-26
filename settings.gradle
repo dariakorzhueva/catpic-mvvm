@@ -1,0 +1,2 @@
+rootProject.name='catpic-mvvm'
+include ':app'
