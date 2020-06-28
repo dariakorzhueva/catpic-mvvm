@@ -4,7 +4,7 @@
     <data>
         <variable
             name="item"
-            type="com.korzhuevadaria.catpicmvvm.network.PhotoItem" />
+            type="com.korzhuevadaria.catpicmvvm.models.CatItem" />
     </data>
 
    <ImageView
@@ -13,7 +13,7 @@
        android:layout_height="@dimen/image_height"
        android:adjustViewBounds="true"
        android:paddingTop="2dp"
-       imageUrl="@{item.}"
+       imageUrl="@{item.url}"
        android:scaleType="centerCrop"/>
 
 </layout>

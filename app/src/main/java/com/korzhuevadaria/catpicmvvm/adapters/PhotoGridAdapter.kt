@@ -7,25 +7,25 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.korzhuevadaria.catpicmvvm.databinding.GridViewItemBinding
-import com.korzhuevadaria.catpicmvvm.network.PhotoItem
+import com.korzhuevadaria.catpicmvvm.models.CatItem
 
 class PhotoGridAdapter(val onClickListener: OnClickListener) :
-    ListAdapter<PhotoItem, PhotoGridAdapter.PhotoViewHolder>(DiffCallback) {
+    ListAdapter<CatItem, PhotoGridAdapter.PhotoViewHolder>(DiffCallback) {
     class PhotoViewHolder(private var binding: GridViewItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(photoItem: PhotoItem) {
-            binding.item = photoItem
+        fun bind(catItem: CatItem) {
+            binding.item = catItem
 
             binding.executePendingBindings()
         }
     }
 
-    companion object DiffCallback : DiffUtil.ItemCallback<PhotoItem>() {
-        override fun areItemsTheSame(oldItem: PhotoItem, newItem: PhotoItem): Boolean {
+    companion object DiffCallback : DiffUtil.ItemCallback<CatItem>() {
+        override fun areItemsTheSame(oldItem: CatItem, newItem: CatItem): Boolean {
             return oldItem === newItem
         }
 
-        override fun areContentsTheSame(oldItem: PhotoItem, newItem: PhotoItem): Boolean {
+        override fun areContentsTheSame(oldItem: CatItem, newItem: CatItem): Boolean {
             return oldItem.id == newItem.id
         }
     }
@@ -45,7 +45,7 @@ class PhotoGridAdapter(val onClickListener: OnClickListener) :
         holder.bind(photoItem)
     }
 
-    class OnClickListener(val clickListener: (photoItem: PhotoItem) -> Unit) {
-        fun onClick(photoItem: PhotoItem) = clickListener(photoItem)
+    class OnClickListener(val clickListener: (photoItem: CatItem) -> Unit) {
+        fun onClick(photoItem: CatItem) = clickListener(photoItem)
     }
 }
