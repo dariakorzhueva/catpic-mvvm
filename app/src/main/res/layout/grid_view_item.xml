@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <variable
+            name="item"
+            type="com.korzhuevadaria.catpicmvvm.network.PhotoItem" />
     </data>
 
    <ImageView
@@ -11,6 +13,7 @@
        android:layout_height="@dimen/image_height"
        android:adjustViewBounds="true"
        android:paddingTop="2dp"
+       imageUrl="@{item.}"
        android:scaleType="centerCrop"/>
 
 </layout>

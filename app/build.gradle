@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -20,14 +21,24 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField 'String', "VKApiKey", VK_API_KEY
+            resValue 'string', "vk_api_key", VK_API_KEY
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', "VKApiKey", VK_API_KEY
+            resValue 'string', "vk_api_key", VK_API_KEY
         }
     }
 
     dataBinding {
         enabled = true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
