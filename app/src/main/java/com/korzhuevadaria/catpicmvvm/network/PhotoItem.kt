@@ -1,10 +1,7 @@
 package com.korzhuevadaria.catpicmvvm.network
 
-import android.os.Parcelable
 import com.squareup.moshi.Json
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
 class PhotoItem(
     val id: String,
     @Json(name = "album_id")
@@ -19,4 +16,4 @@ class PhotoItem(
     val text: String,
     @Json(name = "date")
     val date: String
-) : Parcelable
+)
