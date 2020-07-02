@@ -1,11 +1,9 @@
 package com.korzhuevadaria.catpicmvvm.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.korzhuevadaria.catpicmvvm.models.CatItem
-import com.korzhuevadaria.catpicmvvm.network.VkApi
 import com.korzhuevadaria.catpicmvvm.repository.PhotosRepository
 import kotlinx.coroutines.*
 
