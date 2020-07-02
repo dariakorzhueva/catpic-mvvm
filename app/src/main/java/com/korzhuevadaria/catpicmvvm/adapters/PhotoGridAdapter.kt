@@ -1,5 +1,6 @@
 package com.korzhuevadaria.catpicmvvm.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +16,6 @@ class PhotoGridAdapter(val onClickListener: OnClickListener) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(catItem: CatItem) {
             binding.item = catItem
-
             binding.executePendingBindings()
         }
     }

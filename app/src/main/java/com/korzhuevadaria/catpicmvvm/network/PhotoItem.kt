@@ -5,13 +5,18 @@ import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class PhotoItem(
+class PhotoItem(
     val id: String,
+    @Json(name = "album_id")
     val albumId: String,
+    @Json(name = "owner_id")
     val ownerId: String,
+    @Json(name = "user_id")
     val userId: String,
-    @Json(name = "img_src") val photoSizes: List<SizeItem>,
+    @Json(name = "sizes")
+    val photoSizes: List<SizeItem>,
+    @Json(name = "text")
     val text: String,
-    val date: String,
-    val postId: String
+    @Json(name = "date")
+    val date: String
 ) : Parcelable
