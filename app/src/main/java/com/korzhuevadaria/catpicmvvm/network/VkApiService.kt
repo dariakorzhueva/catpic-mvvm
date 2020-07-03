@@ -31,7 +31,7 @@ interface VkApiService {
      * token - ключ доступа
      * version - версия API */
     @GET("photos.get?")
-    open fun getWallPhotos(
+    fun getWallPhotos(
         @Query("owner_id") owner: String? = "-130670107",
         @Query("album_id") album: String? = "wall",
         @Query("rev") rev: Int = 1,
@@ -49,7 +49,7 @@ interface VkApiService {
      * token - ключ доступа
      * version - версия API */
     @GET("photos.get?")
-    open fun getFromPositionWallPhotos(
+    fun getFromPositionWallPhotos(
         @Query("owner_id") owner: String? = "-130670107",
         @Query("album_id") album: String? = "wall",
         @Query("rev") rev: Int = 0,
