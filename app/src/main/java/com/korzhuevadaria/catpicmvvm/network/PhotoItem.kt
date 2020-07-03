@@ -2,7 +2,7 @@ package com.korzhuevadaria.catpicmvvm.network
 
 import com.squareup.moshi.Json
 
-class PhotoItem(
+data class PhotoItem(
     val id: String,
     @Json(name = "album_id")
     val albumId: String,

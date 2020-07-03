@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="item"
             type="com.korzhuevadaria.catpicmvvm.models.CatItem" />
     </data>
 
-   <ImageView
-       android:id="@+id/cat_image"
-       android:layout_width="match_parent"
-       android:layout_height="@dimen/image_height"
-       android:adjustViewBounds="true"
-       android:paddingBottom="@dimen/padding_image"
-       android:paddingTop="@dimen/padding_image"
-       android:paddingStart="@dimen/padding_image"
-       android:paddingEnd="@dimen/padding_image"
-       imageUrl="@{item.url}"
-       android:src="@drawable/ic_broken_image"
-       android:scaleType="centerCrop"/>
-
+        <ImageView
+            android:id="@+id/cat_image"
+            imageUrl="@{item.url}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_height"
+            android:adjustViewBounds="true"
+            android:paddingStart="@dimen/padding_image"
+            android:paddingTop="@dimen/padding_image"
+            android:paddingEnd="@dimen/padding_image"
+            android:paddingBottom="@dimen/padding_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_broken_image" />
 </layout>

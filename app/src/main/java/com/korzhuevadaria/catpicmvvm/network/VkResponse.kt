@@ -1,5 +1,5 @@
 package com.korzhuevadaria.catpicmvvm.network
 
-class VkResponse (
+data class VkResponse (
     val response: PhotoResponse
 )

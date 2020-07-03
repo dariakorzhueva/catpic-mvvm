@@ -1,6 +1,6 @@
 package com.korzhuevadaria.catpicmvvm.network
 
-class PhotoResponse(
+data class PhotoResponse(
     val count: Int,
     val items: List<PhotoItem>
 )
