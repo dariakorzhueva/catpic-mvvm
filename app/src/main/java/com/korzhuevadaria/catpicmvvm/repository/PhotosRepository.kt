@@ -10,8 +10,11 @@ class PhotosRepository() {
     suspend fun refreshPhotos() {
         val vkResponse = VkApi.retrofitService.getWallPhotos().await()
 
-        photoConverted = vkResponse.response.items.map {
-            it.asDomainModel()
-        }
+        if (vkResponse != null)
+            photoConverted = vkResponse.response.items.map {
+                it.asDomainModel()
+            }
+        else
+            photoConverted = ArrayList<CatItem>()
     }
 }

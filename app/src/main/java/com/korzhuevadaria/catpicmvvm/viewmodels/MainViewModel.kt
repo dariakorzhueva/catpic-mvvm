@@ -10,7 +10,7 @@ import kotlinx.coroutines.*
 class MainViewModel : ViewModel() {
     private val repositoryPhoto = PhotosRepository()
 
-    private var viewModelJob = SupervisorJob()
+    private var viewModelJob = Job()
 
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
 

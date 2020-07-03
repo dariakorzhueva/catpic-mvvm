@@ -35,7 +35,7 @@ interface VkApiService {
         @Query("owner_id") owner: String? = "-130670107",
         @Query("album_id") album: String? = "wall",
         @Query("rev") rev: Int = 1,
-        @Query("count") count: Int = 15,
+        @Query("count") count: Int = 21,
         @Query("access_token") token: String? = BuildConfig.VKApiKey,
         @Query("v") version: String? = "5.101"
     ): Deferred<VkResponse>
